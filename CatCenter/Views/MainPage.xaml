@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatCenter.MainPage"
+             BackgroundImageSource="catlogo.png" HeightRequest="800" WidthRequest="800">
+    
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="10">
+
+            <Grid RowDefinitions="*,*,*,*,*,*"
+                  ColumnDefinitions="*,*,*"
+                  RowSpacing="20"
+                  ColumnSpacing="30">
+
+                <Label Text="CatCenter"
+                       TextColor="MediumPurple"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       FontAttributes="Bold"
+                       Style="{StaticResource Headline}"/>
+
+                <Label Text="Adopt don't shop 🐈"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       FontSize="15"
+                       Style="{StaticResource SubHeadline}"/>
+
+                <Button Text="Logga in" BackgroundColor ="MediumPurple" BorderColor="Purple" BorderWidth="1"  Clicked="OnClickedGoLoginPage" WidthRequest="90" Grid.Row="1" Grid.Column="0"/>
+                <Button Text="Om oss" BackgroundColor ="MediumPurple" Clicked="OnClickedGoAboutPage" WidthRequest="200" Grid.Row="3" Grid.Column="1"/>
+                <Button Text="Våra katter" BackgroundColor ="MediumPurple" Clicked="OnClickedGoOurCatsPage" WidthRequest="200" Grid.Row="4" Grid.Column="1"/>
+                <Button Text="Kontakta oss" BackgroundColor ="MediumPurple" Clicked="OnClickedGoContactsPage" WidthRequest="200" Grid.Row="5" Grid.Column="1"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

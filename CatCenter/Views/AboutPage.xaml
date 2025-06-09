@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatCenter.Views.AboutPage"
+             Title="AboutPage"
+             BackgroundColor="LavenderBlush">
+
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid RowDefinitions="Auto, Auto,*,*,*" Padding="0,20,0,20">
+
+                <Label Text="Om oss"  
+                       HorizontalOptions="Center"  
+                       VerticalOptions="Center"  
+                       Style="{StaticResource Headline}"  
+                       Grid.Row="0"></Label>
+
+                <Label Text="Vi har många söta katter som väntar på att hitta sitt nya hem!🐈"  
+                       HorizontalOptions="Center"  
+                       VerticalOptions="Center"  
+                       FontSize="15" 
+                       Grid.Row="1"></Label>
+
+                <Image  x:Name="cat"
+                        Source="cat.jpg"
+                        Grid.Row="2"
+                        HeightRequest="250"
+                        Margin="15"
+                        HorizontalOptions="Center"></Image>
+
+
+                <Label Text="Klicka här för att se våra katter!" 
+                       HorizontalOptions="Center"  
+                       VerticalOptions="Center"  
+                       FontSize="15"  
+                       Grid.Row="3"></Label>
+
+                <Button Text="Våra katter"
+                        BackgroundColor="MediumPurple"
+                        WidthRequest="200"
+                        Clicked="OnClickedOurCats"
+                        Grid.Row="4"/>
+
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+
+</ContentPage>

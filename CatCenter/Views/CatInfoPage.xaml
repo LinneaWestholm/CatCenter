@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatCenter.Views.CatInfoPage"
+             Title="CatInfoPage"
+             BackgroundColor="LavenderBlush">
+    
+    <VerticalStackLayout Margin="20" Padding="30">
+        <Grid RowDefinitions="*,*,*,*,*"
+       RowSpacing="10">
+            <Label Text="{Binding Name}"
+               Style="{StaticResource Headline}"
+               Grid.Row="0"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+            <Image  Source="{Binding ImageUrl}"
+                Grid.Row="1"
+                HeightRequest="250"
+                HorizontalOptions="Center"></Image>
+
+            <Label Text="{Binding Description}"
+               Grid.Row="2"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"></Label>
+
+            <Label Text="{Binding BirthDate,StringFormat='Född: {0}'}"
+               Grid.Row="3"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontAttributes="Italic"></Label>
+
+            <Button Text="Adoptera"
+                Grid.Row="4"
+                WidthRequest="300"
+                BackgroundColor="MediumPurple"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="OnClickedAdoptCat"></Button>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

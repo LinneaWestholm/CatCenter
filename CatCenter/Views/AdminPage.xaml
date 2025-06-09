@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatCenter.Views.AdminPage"
+             Title="AdminPage"
+             BackgroundColor="LavenderBlush">
+    <VerticalStackLayout Padding="40" Spacing="10">
+
+        <Label Text="Lägg till en katt" TextColor="Purple"  FontSize="25"></Label>
+
+        <Entry x:Name="NameEntry"
+               Placeholder="Name"
+               BackgroundColor="White"></Entry>
+
+        <Entry x:Name="BirthDateEntry"
+               Placeholder="BirthDate"
+               BackgroundColor="White"></Entry>
+
+        <Entry x:Name="DescriptionEntry"
+               Placeholder="Description"
+               BackgroundColor="White"></Entry>
+
+
+        <Button Text="Spara"
+                BackgroundColor="MediumPurple"
+                Clicked="OnClickedSavedCat"/>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>
